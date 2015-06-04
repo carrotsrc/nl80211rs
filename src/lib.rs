@@ -185,7 +185,7 @@ pub enum Commands {
 
 // attributes
 // Do not change order; acts as ABI
-enum Attrs {
+pub enum Attrs {
     Unspec,
 
     WiPhy,
@@ -536,7 +536,8 @@ enum Attrs {
     AfterLast
 }
 
-enum IfType {
+// Interface types
+pub enum IfType {
     Unspecified,
     AdHoc,
     Station,
@@ -552,7 +553,8 @@ enum IfType {
     NumIfTypes
 }
 
-enum StaFlags {
+// Station flags
+pub enum StaFlags {
     __Invalid,
     Authorized,
     ShortPreamble,
@@ -562,4 +564,10 @@ enum StaFlags {
     TdlsPeer,
     Associated,
     AfterLast
+}
+
+#[repr(C, packed)]
+pub struct StaFlagUpdate {
+    mask: u32,
+    set: u32,
 }

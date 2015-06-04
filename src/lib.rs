@@ -641,3 +641,16 @@ pub enum MpathFlags {
     Resolved = 16
 }
 
+pub enum MpathInfo {
+    __Invalid,
+    FrameQlen,
+    Sn,
+    Metric,
+    Exptime,
+    Flags,
+    DiscoveryTimeout,
+    DiscoveryRetries,
+
+    AfterLast,
+}
+

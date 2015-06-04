@@ -599,3 +599,45 @@ pub enum StaBssParam {
 
     AfterLast
 }
+
+pub enum StaInfo {
+    __Invalid,
+    InactiveTime,
+    RxBytes,
+    TxBytes,
+    Llid,
+    Plid,
+    PlinkState,
+    Signal,
+    TxBitrate,
+    RxPackets,
+    TxPackets,
+    TxRetries,
+    TxFailed,
+    SignalAvg,
+    RxBitrate,
+    BssParam,
+    ConnectedTime,
+    StaFlags,
+    BeaconLoss,
+    TOffset,
+    LocalPm,
+    PeerPm,
+    NonpeerPm,
+    RxBytes64,
+    TxBytes64,
+    ChainSignal,
+    ChainSignalAvg,
+    ExpectedThroughput,
+
+    AfterLast
+}
+
+pub enum MpathFlags {
+    Active = 1,
+    Resolving = 2,
+    SnValid = 4,
+    Fixed = 8,
+    Resolved = 16
+}
+

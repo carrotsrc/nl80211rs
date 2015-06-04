@@ -535,3 +535,20 @@ enum Attrs {
 
     AfterLast
 }
+
+enum IfType {
+    Unspecified,
+    AdHoc,
+    Station,
+    Ap,
+    ApVlan,
+    Wds,
+    Monitor,
+    MeshPoint,
+    P2pClient,
+    P2pGo,
+    P2pDevice,
+
+    NumIfTypes
+}
+

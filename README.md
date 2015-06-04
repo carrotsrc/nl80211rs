@@ -21,4 +21,8 @@ Becomes
 * Station Flag update struct,
 * Bitrate info enum,
 * Station Bss Information enum,
+* Mesh path flag enum,
+* Mesh path Infor enum,
+* Band attributes enum,
+
 

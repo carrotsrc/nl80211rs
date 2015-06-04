@@ -571,3 +571,20 @@ pub struct StaFlagUpdate {
     mask: u32,
     set: u32,
 }
+
+// attrubtes for getting station bitrate information
+pub enum RateInfo {
+    __Invalid,
+    Bitrate,
+    Mcs,
+    Width40Mhz,
+    ShortGi,
+    Bitrate32,
+    VhtMcs,
+    VhtNss,
+    Width80Mhz,
+    Width80P80Mhz,
+    Width160Mhz,
+
+    AfterLast
+}

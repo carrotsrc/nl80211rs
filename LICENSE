@@ -1,5 +1,5 @@
-Rust port of nl80211 header
----------------------------
+Rust version of nl80211 header
+------------------------------
 Copyright 2015, Charlie Fyvie-Gauld <cfg@zunautica.org>
 
 

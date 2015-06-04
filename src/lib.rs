@@ -588,3 +588,14 @@ pub enum RateInfo {
 
     AfterLast
 }
+
+pub enum StaBssParam {
+    __Invalid,
+    CtsProt,
+    ShortPreamble,
+    ShortSlotTime,
+    DtimPeriod,
+    BeaconInterval,
+
+    AfterLast
+}

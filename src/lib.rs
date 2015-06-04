@@ -1130,7 +1130,7 @@ pub enum CoalesceCondition {
     NoMatch
 }
 
-pub struct IfaceLimitAttr {
+pub enum IfaceLimitAttr {
     Unspec,
     Max,
     Types,
@@ -1208,4 +1208,35 @@ pub enum TldsOperation {
     Teardown,
     EnableLink,
     DisableLink,
+}
+
+pub enum FeatureFlags {
+    SkTxStatus              = 1 << 0,
+    HtIbss                  = 1 << 1,
+    InactivityTimer         = 1 << 2,
+    CellBaseRegHints        = 1 << 3,
+    P2pDeviceNeedsChannel   = 1 << 4,
+    Sae                     = 1 << 5,
+    LowPriorityScan         = 1 << 6,
+    ScanFlush               = 1 << 7,
+    ApScan                  = 1 << 8,
+    VifTxPower              = 1 << 9,
+    NeedObssScan            = 1 << 10,
+    P2pGoCtwim              = 1 << 11,
+    P2pGoOppps              = 1 << 12,
+
+    AdvertiseChanLimits     = 1 << 14,
+    FullApClientState       = 1 << 15,
+    UserspaceMpm            = 1 << 16,
+    ActiveMonitor           = 1 << 17,
+    ApModeChanWidthChange   = 1 << 18,
+    DsParamSetIeInProbes    = 1 << 19,
+    WfaTpcIeInProbes        = 1 << 20,
+    Quiet                   = 1 << 21,
+    TxPowerInsertion        = 1 << 22,
+    AcktoEstimation         = 1 << 23,
+    StaticSmps              = 1 << 24,
+    DynamicSmps             = 1 << 25,
+    SupportsWmmAdmission    = 1 << 26,
+    MacOnCreate             = 1 << 27
 }

@@ -552,3 +552,14 @@ enum IfType {
     NumIfTypes
 }
 
+enum StaFlags {
+    __Invalid,
+    Authorized,
+    ShortPreamble,
+    Wme,
+    Mfp,
+    Authenticated,
+    TdlsPeer,
+    Associated,
+    AfterLast
+}

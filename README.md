@@ -14,5 +14,5 @@ Becomes
 #### Work in progress
 
 ### Complete:
-* nl80211 commands enum
-Separate alias::Commands for duplicate command aliases in the enum (not ideal)
+* nl80211 commands enum (Separate alias::Commands for duplicate command aliases in the enum (not ideal))
+* nl80211 attr enum

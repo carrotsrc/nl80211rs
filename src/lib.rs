@@ -1,5 +1,5 @@
 
-mod Alias {
+mod alias {
     pub enum Commands {
         NewBeacon = 15,
         DelBeacon = 17,
@@ -8,6 +8,9 @@ mod Alias {
         ActionTxStatus = 64,
     }
 }
+
+// Commands
+// Do not change order; acts as ABI
 pub enum Commands {
     Unspec,
     GetWiPhy,
@@ -95,9 +98,9 @@ pub enum Commands {
     RegisterFrame,
     AliasRegisterAction, // RegisterFrame alias
     Frame,
-    Action,         // Frame alias
-    AliasFrameTxStatus,
-    AliasActionTxStatus, // Frame Tx Status
+    AliasAction,         // Frame alias
+    FrameTxStatus,
+    AliasActionTxStatus, // FrameTxStatus
 
     SetPowerSave,
     GetPowerSave,
@@ -176,6 +179,359 @@ pub enum Commands {
 
     GetMpp,
 
-    CmdMax
+    AfterLast
+}
 
+
+// attributes
+// Do not change order; acts as ABI
+enum Attrs {
+    Unspec,
+
+    WiPhy,
+    WiPhyName,
+
+    IfIndex,
+    IfName,
+    IfType,
+
+    Mac,
+
+    KeyData,
+    KeyIdx,
+    KeyCipher,
+    KeySeq,
+    KeyDefault,
+
+    BeaconInterval,
+    DtimPeriod,
+    BeaconHead,
+    BeaconTail,
+
+    StaAid,
+    StaFlags,
+    StaListenInterval,
+    StaSupportedRates,
+    StaVlan,
+    StaInfo,
+
+    WiPhyBands,
+    
+    MntrFlags,
+
+    MeshId,
+    StaPlinkAction,
+    MpathNextHop,
+    MpathInfo,
+
+    BssCtsProt,
+    BssShortPreamble,
+    BssShortSlotTime,
+
+    HtCapability,
+
+    SupportedIfTypes,
+
+    RegAlpha2,
+    RegRules,
+
+    MeshConfig,
+
+    BssBasicRates,
+
+    WiPhyTxqParams,
+    WiPhyFreq,
+    WiPhyChannelType,
+
+    KeyDefaultMgmt,
+
+    MgmtSubtype,
+    Ie,
+
+    MaxNumScanSsids,
+
+    ScanFrequencies,
+    ScanSsids,
+    Generation,
+    Bss,
+
+    RegInitiator,
+    RegType,
+
+    SupportedCommands,
+
+    Frame,
+    Ssid,
+    AuthType,
+    ReasonCode,
+
+    KeyType,
+
+    MaxScanIeLen,
+    CipherSuites,
+
+    FreqBefore,
+    FreqAfter,
+
+    FreqFixed,
+
+    WiPhyRetryShort,
+    WiPhyRetryLong,
+    WiPhyFragThreshold,
+    WiPhyRtsThreshold,
+
+    TimedOut,
+
+    UseMfp,
+
+    StaFlags2,
+
+    ControlPort,
+
+    TestData,
+
+    Privacy,
+
+    DisconnectedByAp,
+
+    StatusCode,
+
+    CipherSuitesPairwise,
+    CipherSuiteGroup,
+    WpaVersions,
+    AkmSuites,
+
+    ReqIe,
+    RespIe,
+
+    PrevBssid,
+
+    Key,
+    Keys,
+
+    Pid,
+
+    Addr4,
+
+    SurveyInfo,
+
+    PmkId,
+    MaxNumPmkIds,
+
+    Duration,
+
+    Cookie,
+
+    WiPhyCoverageClass,
+
+    TxRates,
+
+    FrameMatch,
+
+    Ack,
+
+    PsState,
+    
+    Cqm,
+
+    LocalStateChange,
+
+    ApIsolate,
+
+    WiPhyTxPowerSetting,
+    WiPhyTxPowerLevel,
+
+    TxFrameTypes,
+    RxFrameTypes,
+    FrameType,
+
+    ControlPortEthertype,
+    ControlPortNoEncrypt,
+
+    SupportIbssRsn,
+
+    WiPhyAntennaTx,
+    WiPhyAntennaRx,
+
+    McastRate,
+
+    OffChannelTxOk,
+
+    BssHtOpmode,
+
+    KeyDefaultTypes,
+
+    MaxRemainOnChannelDuration,
+
+    MeshSetup,
+
+    WiPhyAntennaAvailTx,
+    WiPhyAntennaAvailRx,
+
+    SupportMeshAuth,
+    StaPlinkState,
+
+    WowLanTriggers,
+    WowLanTriggersSupported,
+
+    SchedScanInterval,
+
+    InterfaceCombinations,
+    SoftwareIfTypes,
+
+    RekeyData,
+
+    MaxNumSchedScanSsids,
+    MaxSchedScanIeLen,
+
+    ScanSuppRates,
+
+    HiddenSsid,
+
+    IeProbeResp,
+    IeAssocResp,
+
+    StaWme,
+    SupportApUapsd,
+
+    RoamSupport,
+
+    AttrSchedScanMatch,
+    MaxMatchSets,
+
+    PmksaCandidate,
+
+    TxNoCckRate,
+
+    TdlsAction,
+    TdlsDialogToken,
+    TdlsOperation,
+    TdlsSupport,
+    TdlsExternalSetup,
+
+    DeviceApSme,
+
+    DontWaitForAck,
+
+    FeatureFlags,
+
+    ProbeRespOffload,
+
+    ProbeResp,
+
+    DfsRegion,
+
+    DisableHt,
+    HtCapabilityMask,
+
+    NoackMap,
+
+    InactivityTimeout,
+
+    RxSignalDbm,
+
+    BgScanPeriod,
+
+    Wdev,
+
+    UserRegHintType,
+
+    ConnFailedReason,
+
+    SaeData,
+
+    VhtCapability,
+
+    ScanFlags,
+
+    ChannelWidth,
+    CenterFreq1,
+    CenterFreq2,
+
+    P2pCtwindow,
+    P2pOppps,
+
+    LocalMeshPowerMode,
+
+    AclPolicy,
+
+    MacAddrs,
+
+    MacAclMax,
+
+    RadarEvent,
+
+    ExtCapa,
+
+    ExtCapaMask,
+
+    StaCapability,
+    StaExtCapability,
+
+    ProtocolFeatures,
+    SplitWiphyDump,
+
+    DisableVht,
+    VhtCapabilityMask,
+
+    Mdid,
+
+    IeRic,
+
+    CritProtId,
+    MaxCritProtDuration,
+
+    PeerAid,
+
+    CoalesceRule,
+
+    ChSwitchCount,
+    ChSwitchBlockTx,
+    CsaIes,
+    CsaCOffBeacon,
+    CsaCOffPresp,
+
+    RxmgmtFlags,
+
+    StaSupportedChannels,
+    StaSipportedOperClasses,
+
+    HandleDfs,
+
+    Support5Mhz,
+    Support10Mhz,
+
+    OpmodeNotif,
+
+    VendorId,
+    VendorSubcmd,
+    VendorData,
+    VendorEvents,
+
+    QodMap,
+
+    MacHint,
+    WiPhyFreqHint,
+
+    MaxApAssocSta,
+
+    TdlsPeerCapability,
+
+    IfaceSocketOwnder,
+    CsaCOffsetsTx,
+    MaxCsaCounters,
+
+    TdlsInitiator,
+
+    UseRrm,
+
+    WiPhyDynAck,
+
+    Tsid,
+    UserPrio,
+    AdmittedTime,
+
+    SmpsMode,
+
+    AfterLast
 }

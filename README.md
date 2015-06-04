@@ -4,7 +4,7 @@ This is a conversion of the 802.11 netlink interface public header file into a r
 
 eg.
 
-`nl80211_commands::START_AP`
+`nl80211_commands::NL80211_CMD_START_AP`
 
 Becomes
 
@@ -24,5 +24,10 @@ Becomes
 * Mesh path flag enum,
 * Mesh path Infor enum,
 * Band attributes enum,
-
+* Freqency attributes enum,
+* Bitrate attribute enum
+* Initiator of reg domain requests enum
+* Regulatory domain type enum
+* Regulatory rule attributes enum
+* Schedule scan attributes
 

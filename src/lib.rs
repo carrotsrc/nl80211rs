@@ -670,3 +670,72 @@ pub enum BandAttr {
     AfterLast,
 }
 
+pub enum FrequencyAttr {
+    __Invalid,
+    Freq,
+    Disabled,
+    NoIr,
+    NoIbss,
+    Radar,
+    MaxTxPower,
+    DfsState,
+    DfsTime,
+    NoHt40Minus,
+    NoHt40Plus,
+    No80Mhz,
+    No160Mhz,
+    DfsCacTime,
+    IndoorOnly,
+    GoConcurrent,
+    No20Mhz,
+    No10Mhz,
+
+    AfterLast
+}
+
+
+pub enum BitrateAttr {
+    __Invalid,
+    Rate,
+    ShortPreamble2Ghz,
+
+    AfterLast
+}
+
+pub enum RegInitiator {
+    SetByCore,
+    SetByUser,
+    SetByDriver,
+    SetByCountryIe,
+}
+
+pub enum RegType {
+    Country,
+    World,
+    CustomWorld,
+    Intersection,
+}
+
+pub enum RegRuleAttr {
+    __Invalid,
+    RuleFlags,
+
+    FreqRangeState,
+    FreqRangeEnd,
+    FreqRangeMaxBw,
+
+    PowerRuleMaxAntGain,
+    PowerRuleMaxEirp,
+
+    DfsCacTime,
+
+    AfterLast,
+}
+
+pub enum SchedScanMatAttr {
+    __Invalid,
+    Ssid,
+    Rssi,
+
+    AfterLast,
+}

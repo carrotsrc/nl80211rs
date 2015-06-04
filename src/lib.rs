@@ -1313,4 +1313,35 @@ pub enum TdlsPeerCapability {
     Wmm = 4
 }
 
-const VendorIdIsLinux :u32 = 0x80000000;
+
+pub mod constants {
+    pub const GENL_NAME : &'static str = "nl80211";
+
+    pub const MAX_SUPP_RATES: u8 = 32;
+    pub const MAX_SUPP_HT_RATE: u8 = 77;
+    pub const MAX_SUPP_REG_RULES: u8 = 32;
+    pub const TKIP_DATA_OFFSET_ENCR_KEY: u8 = 0;
+    pub const TKIP_DATA_OFFSET_TX_MIC_KEY: u8 = 16;
+    pub const TKIP_DATA_OFFSET_RX_MIC_KEY: u8 = 24;
+    pub const HT_CAPABILITY_LEN: u8 = 26;
+    pub const VHT_CAPABILITY_LEN: u8 = 12;
+
+    pub const MAX_NR_CIPHER_SUITES: u8 = 5;
+    pub const MAX_NR_AKM_SUITES: u8 = 2;
+
+    pub const MIN_REMAIN_ON_CHANNEL_TIME: u8 = 10;
+
+    pub const SCAN_RSSI_THOLD_OFF: i16 = -300;
+
+    pub const CQM_TXE_MAX_INTVL: u32 = 1800;
+
+    pub const VENDORIDISLINUX :u32 = 0x80000000;
+
+    pub const VHT_NSS_MAX: u8 = 8;
+
+    pub const KCK_LEN: u8 = 16;
+    pub const KEK_LEN: u8 = 16;
+    pub const REPLAT_CTR_LEN: u8 = 16;
+
+    pub const CRIT_PROTO_MAX_DURATION: u32 = 5000; // msec
+}

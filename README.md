@@ -4,11 +4,11 @@ This is a conversion of the 802.11 netlink interface public header file into a r
 
 eg.
 
-```nl80211_commands::START_AP```
+`nl80211_commands::START_AP`
 
 Becomes
 
-```nl80211::Commands::StartAp```
+`nl80211::Commands::StartAp`
 
 
 #### Work in progress

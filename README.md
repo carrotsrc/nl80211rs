@@ -30,4 +30,9 @@ Becomes
 * Regulatory domain type enum
 * Regulatory rule attributes enum
 * Schedule scan attributes
-
+* Regulatory rule enum
+* DFS region enum,
+* User hint enum
+* Regulatory hint type
+* Survey info
+* Monitor mode flags

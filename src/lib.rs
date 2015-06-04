@@ -739,3 +739,332 @@ pub enum SchedScanMatAttr {
 
     AfterLast,
 }
+
+pub enum RegRuleFlags {
+    NoOfdm = 1,
+    NoCck = 2,
+    NoIndoor = 4,
+    NoOutdoor = 8,
+    Dfs = 16,
+    PtpOnly = 32,
+    PtmpOnly = 64,
+    NoIr = 128,
+    NoIbss = 256,
+
+    AutoBw = 2048
+}
+
+pub enum DfsRegions {
+    Unset,
+    Fcc,
+    Etsi,
+    Jp,
+}
+
+pub enum UserRegHintType {
+    User,
+    CellBase,
+    Indoor
+}
+
+pub enum SurveyInfo {
+    __Invalid,
+    Frequency,
+    Noise,
+    InUse,
+    ChannelTime,
+    ChannelTimeBusy,
+    ChannelTimeExtBusy,
+    ChannelTimeRx,
+    ChannelTimTx,
+
+    AfterLast
+}
+
+pub enum MntrFlags {
+    __Invalid,
+    FcsFail,
+    PlcpFail,
+    Control,
+    OtherBss,
+    CookFrames,
+    Active,
+
+    AfterLast
+}
+
+pub enum MeshPowerMode {
+    Unkown,
+    Active,
+    LightSleep,
+    DeepSleep,
+
+    AfterLast
+}
+
+pub enum MechConfParams {
+    __Invalid,
+    RetryTimeout,
+    ConfirmTimeout,
+    HoldingTimeout,
+    MaxPeerLinks,
+    MaxRetries,
+    Ttl,
+    AutoOpenPlinks,
+    HwmpMaxPreqRetries,
+    PathRefreshTime,
+    MinDiscoveryTimeout,
+    HwmpActivePathTimeout,
+    HwmpPreqMinInterval,
+    HwmpNetDiamTrvsTime,
+    HwmpRootmode,
+    ElementTtl,
+    HwmpRannInterval,
+    GateAnnouncement,
+    HwmpPerrMinInterval,
+    Forwarding,
+    RssiThreshold,
+    SyncOffsetMaxNeighbor,
+    HtOpmode,
+    HwmpPathToRootTimeout,
+    HwmpRootInterval,
+    HwmpConfirmationInterval,
+    PowerMode,
+    AwakeWindow,
+    PlinkTimeout,
+
+    AfterLast
+}
+
+pub enum MeshSetupParams {
+    __Invalid,
+    EnableVendorPathSel,
+    EnableVendorMetric,
+    Ie,
+    UserspaceAuth,
+    UserspaceAmpe,
+    EnableVendorSync,
+    UserspaceMpm,
+    AuthProtocol,
+
+    AfterLast
+}
+
+pub enum TxqAttr {
+    __Invalid,
+
+    Ac,
+    Txop,
+    Cwmin,
+    Cwmax,
+    Aifs,
+
+    AfterLast
+    
+}
+
+pub enum ac {
+    Vo,
+    Vi,
+    Be,
+    Bk,
+    NumAcs
+}
+
+pub enum ChannelType {
+    NoHt,
+    Ht20,
+    Ht40Minus,
+    Ht40Plus,
+}
+
+pub enum ChannelWidth {
+    Width20NoHt,
+    Width20,
+    Width40,
+    Width80,
+    Width80P80,
+    Width160,
+    Width5,
+    Width10,
+}
+
+pub enum BssScanWidth {
+    Width20,
+    Width10,
+    Width5
+}
+
+pub enum Bss {
+    __Invalid,
+    Bssid,
+    Frequency,
+    Tsf,
+    BeaconInterval,
+    Capability,
+    InformationElements,
+    SignalMbm,
+    SignalUnspec,
+    Status,
+    SeenMsAgo,
+    BeaconIes,
+    ChanWidth,
+    BeaconTsf,
+    PrespData,
+
+    AfterLast
+}
+
+pub enum  BssStatus {
+    Authenticated,
+    Associated,
+    IbssJoined,
+}
+
+pub enum AuthType {
+    OpenSystem,
+    SharedKey,
+    Ft,
+    NetworkEap,
+    Sae,
+
+    Num,
+    Max,
+    Automatic
+}
+
+pub enum KeyType {
+    Group,
+    Pairwise,
+    Peerkey,
+
+    Num
+}
+
+pub enum Mpf {
+    No,
+    Required
+}
+
+pub enum WpaVersions {
+    Version1 = 1,
+    Version2 = 2
+}
+
+pub enum KeyDefaultTypes {
+    __Invalid,
+    Unicast,
+    Multicast,
+
+    Num
+}
+
+pub enum KeyAttributes {
+    __Invalid,
+    Data,
+    Idx,
+    Cipher,
+    Seq,
+    Default,
+    DefaultMgmt,
+    Type,
+    DefaultTypes,
+
+    Afterlast,
+}
+
+pub enum TxRateAttributes {
+    __Invalid,
+    Legacy,
+    Ht,
+    Vht,
+    Gi,
+
+    AfterLast
+}
+
+pub struct TxrateVht {
+    mcs: [u16;8]
+}
+
+pub enum TxrateGi {
+    DefaultGi,
+    ForceSgi,
+    ForceLgi
+}
+
+pub enum band {
+    Band2Ghz,
+    Band5Ghz,
+    Band60Ghz
+}
+
+pub enum PsState {
+    Disabled,
+    Enabled,
+}
+
+pub enum AttrCqm {
+    __Invalid,
+    RssiThold,
+    RssiHyst,
+    RssiThresholdEvent,
+    PktLossEvent,
+    TxeRate,
+    TxePkts,
+    TxeIntvl,
+
+    AfterLast
+}
+
+pub enum CqmRssiThesholdEvent {
+    Low,
+    High,
+    BeaconLoss
+}
+
+pub enum TxPowerSettings {
+    Automatic,
+    Limited,
+    Fixed
+}
+
+pub enum PacketPatternAttr {
+    __Invalid,
+    Mask,
+    Pattern,
+    Offset,
+
+    Num,
+}
+
+#[repr(C, packed)]
+pub struct PatternSupport {
+    max_patterns: u32,
+    min_pattern_len: u32,
+    max_pattern_len: u32,
+    max_pkt_offset: u32
+}
+
+pub enum WoWlanTriggers {
+    __Invalid,
+    Any,
+    Disconnect,
+    MagicPkt,
+    PktPattern,
+    GtkRekeySupported,
+    GtkRekeyFailure,
+    EapIdentRequest,
+    Handshake4Way,
+    RfkillRelease,
+    WakeupPkt80211,
+    WakeupPkt80211Len,
+    WakeupPkt8023,
+    WakeupPkt8023Len,
+    TcpConnection,
+    WakeupTcpMatch,
+    WakeupTcpConnLost,
+    WakeupTcpNoMoreTokens,
+
+    Num
+}

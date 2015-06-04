@@ -1240,3 +1240,77 @@ pub enum FeatureFlags {
     SupportsWmmAdmission    = 1 << 26,
     MacOnCreate             = 1 << 27
 }
+
+pub enum ProbeRespOffloadSupportAttr {
+    Wps = 1,
+    Wps2 = 2,
+    P2p = 4,
+    u80211 = 8
+}
+
+pub enum ConnectFailReason {
+    MaxClients,
+    BlockedClient,
+}
+
+pub enum ScanFlags {
+    LowPriority = 1,
+    Flush = 2,
+    Ap = 4
+}
+
+pub enum AclPolicy {
+    AcceptUnlessListed,
+    DenyUnlessListed
+}
+
+pub enum SmpsMode {
+    Off,
+    Static,
+    Dynamic,
+
+    AfterLast
+}
+
+pub enum RadarEvent {
+    Detected,
+    CacFinished,
+    CacAborted,
+    NopFinished
+}
+
+pub enum DfsState {
+    Usable,
+    Unavialable,
+    Available
+}
+
+pub enum ProtocolFeatures {
+    SplitWiphyDump = 1
+}
+
+pub enum CritProtoId {
+    Unspec,
+    Dhcp,
+    Eapol,
+    Apipa,
+    // Other protocols go here
+    Num
+}
+
+pub enum RxmgmtFlags {
+    Answered = 1
+}
+
+pub struct VendorCmdInfo {
+    vendor_id: u32,
+    subcmd: u32,
+}
+
+pub enum TdlsPeerCapability {
+    Ht = 1,
+    Vht = 2,
+    Wmm = 4
+}
+
+const VendorIdIsLinux :u32 = 0x80000000;

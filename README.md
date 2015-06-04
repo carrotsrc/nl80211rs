@@ -11,28 +11,10 @@ Becomes
 `nl80211::Commands::StartAp`
 
 
-#### Work in progress
+### Progress
 
-### Complete:
-* Commands enum (Separate alias::Commands for duplicate command aliases in the enum (not ideal))
-* Attr enum
-* Interface types enum
-* Station Flags enum,
-* Station Flag update struct,
-* Bitrate info enum,
-* Station Bss Information enum,
-* Mesh path flag enum,
-* Mesh path Infor enum,
-* Band attributes enum,
-* Freqency attributes enum,
-* Bitrate attribute enum
-* Initiator of reg domain requests enum
-* Regulatory domain type enum
-* Regulatory rule attributes enum
-* Schedule scan attributes
-* Regulatory rule enum
-* DFS region enum,
-* User hint enum
-* Regulatory hint type
-* Survey info
-* Monitor mode flags
+Included all enums and structures in the header. They are near 1:1 with a few exceptions.
+
+### Todo
+
+include constants for the various define directives

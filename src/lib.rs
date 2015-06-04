@@ -654,3 +654,19 @@ pub enum MpathInfo {
     AfterLast,
 }
 
+pub enum BandAttr {
+    __Invalid,
+    Freq,
+    Rates,
+
+    HtMcsSet,
+    HdCapa,
+    HtAmpduFactor,
+    HtAmpduDensity,
+
+    VhtMcsSet,
+    VhtCapa,
+
+    AfterLast,
+}
+

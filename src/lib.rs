@@ -1046,6 +1046,7 @@ pub struct PatternSupport {
     max_pkt_offset: u32
 }
 
+#[repr(C)]
 pub enum WoWlanTriggers {
     __Invalid,
     Any,
@@ -1067,4 +1068,144 @@ pub enum WoWlanTriggers {
     WakeupTcpNoMoreTokens,
 
     Num
+}
+
+#[repr(C)]
+pub struct WoWlanTcpDataSeq {
+    start: u32,
+    offset: u32, 
+    len: u32
+}
+
+#[repr(C)]
+pub struct WoWlanTcpDataToken {
+    offset: u32,
+    len: u32,
+
+    token_stream: [u8]
+}
+
+#[repr(C)]
+pub struct WoWlanTcpDataTokenFeature {
+    min_len: u32,
+    max_len: u32,
+    bufsize: u32,
+}
+
+pub enum WoWlanTcpAttr {
+    __Invalid,
+    SrcIpv4,
+    DstIpv4,
+    DstMac,
+    SrcPort,
+    DstPort,
+    DataPayload,
+    DataPayloadSeq,
+    DataPayloadToken,
+    DataInterval,
+    WakePayload,
+    WakeMask,
+
+    Num
+}
+
+#[repr(C, packed)]
+pub struct CoalesceRuleSupport {
+    max_rules: u32,
+    pat: PatternSupport,
+    max_delay: u32,
+}
+
+pub enum CoalesceRule {
+    __Invalid,
+    Delay,
+    Condition,
+    PktPattern,
+
+    Num
+}
+
+pub enum CoalesceCondition {
+    Match,
+    NoMatch
+}
+
+pub struct IfaceLimitAttr {
+    Unspec,
+    Max,
+    Types,
+
+    Num
+}
+
+pub enum IfCombinationAttr {
+    Unspec,
+    Limits,
+    Maxnum,
+    StaApBiMatch,
+    NumChannels,
+    RadarDetectWidths,
+    RadarDetectRegions,
+
+    Num
+}
+
+pub enum PlinkState {
+    Listen,
+    OpnSnt,
+    OpnRcvd,
+    CnfRcvd,
+    Estab,
+    Holding,
+    Blocked,
+
+    Num
+}
+
+pub enum PlinkActions {
+    NoAction,
+    open,
+    Block,
+
+    Num
+}
+
+pub enum RekeyData {
+    __Invalid,
+    Kek,
+    Kck,
+    ReplayCtr,
+
+    Num
+}
+
+pub enum HiddenSsid {
+    NotInUse,
+    ZeroLen,
+    ZeroContents,
+}
+
+pub enum StaWmeAttr {
+    __Invalid,
+    UapsdQueues,
+    MaxSp,
+
+    AfterLast
+}
+
+pub enum PmksaCandidateAttr {
+    __Invalid,
+    Index,
+    Bssid,
+    Preauth,
+
+    Num
+}
+
+pub enum TldsOperation {
+    DiscoverReq,
+    Setup,
+    Teardown,
+    EnableLink,
+    DisableLink,
 }

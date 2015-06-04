@@ -1,4 +1,13 @@
 
+mod Alias {
+    pub enum Commands {
+        NewBeacon = 15,
+        DelBeacon = 17,
+        RegisterAction = 60,
+        Action = 62,
+        ActionTxStatus = 64,
+    }
+}
 pub enum Commands {
     Unspec,
     GetWiPhy,
@@ -19,9 +28,9 @@ pub enum Commands {
     GetBeacon,
     SetBeacon,
     StartAp,
-    NewBeacon, // TODO: StartAP Alias
+    AliasNewBeacon, // StartAp alias
     StopAp,
-    DelBeacon, // TODO: StopAP Alias
+    AliasDelBeacon, // StopAp alias
 
     GetStation,
     SetStation,
@@ -84,11 +93,11 @@ pub enum Commands {
     SetTxBitrateMask,
 
     RegisterFrame,
-    RegisterAction, // TODO: RegisterFrame alias
+    AliasRegisterAction, // RegisterFrame alias
     Frame,
-    Action,         // TODO: Frame alias
-    FrameTxStatus,
-    ActionTxStatus, // TODO: Frame Tx Status
+    Action,         // Frame alias
+    AliasFrameTxStatus,
+    AliasActionTxStatus, // Frame Tx Status
 
     SetPowerSave,
     GetPowerSave,

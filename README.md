@@ -4,7 +4,7 @@ This is a conversion of the 802.11 netlink interface public header file into a r
 
 eg.
 
-`nl80211_commands::NL80211_CMD_START_AP`
+`nl80211_commands::START_AP`
 
 Becomes
 
@@ -14,4 +14,5 @@ Becomes
 #### Work in progress
 
 ### Complete:
-* nl80211 commands enum (nl80211::Commands::{command})
+* nl80211 commands enum
+Separate alias::Commands for duplicate command aliases in the enum (not ideal)

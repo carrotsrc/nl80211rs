@@ -14,5 +14,11 @@ Becomes
 #### Work in progress
 
 ### Complete:
-* nl80211 commands enum (Separate alias::Commands for duplicate command aliases in the enum (not ideal))
-* nl80211 attr enum
+* Commands enum (Separate alias::Commands for duplicate command aliases in the enum (not ideal))
+* Attr enum
+* Interface types enum
+* Station Flags enum,
+* Station Flag update struct,
+* Bitrate info enum,
+* Station Bss Information enum,
+

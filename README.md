@@ -15,6 +15,5 @@ Becomes
 
 Included all enums and structures in the header. They are near 1:1 with a few exceptions.
 
-### Todo
+Also included a range of constants
 
-include constants for the various define directives

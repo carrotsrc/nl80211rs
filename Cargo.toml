@@ -1,4 +1,4 @@
 [package]
-name = "nl80211"
+name = "nl80211rs"
 version = "0.1.0"
 authors = ["Charlie FG <cfg@zunautica.org>"]

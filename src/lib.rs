@@ -863,7 +863,7 @@ pub enum TxqAttr {
     
 }
 
-pub enum ac {
+pub enum Ac {
     Vo,
     Vi,
     Be,
@@ -993,7 +993,7 @@ pub enum TxrateGi {
     ForceLgi
 }
 
-pub enum band {
+pub enum Band {
     Band2Ghz,
     Band5Ghz,
     Band60Ghz
@@ -1164,7 +1164,7 @@ pub enum PlinkState {
 
 pub enum PlinkActions {
     NoAction,
-    open,
+    Open,
     Block,
 
     Num
@@ -1245,7 +1245,7 @@ pub enum ProbeRespOffloadSupportAttr {
     Wps = 1,
     Wps2 = 2,
     P2p = 4,
-    u80211 = 8
+    U80211 = 8
 }
 
 pub enum ConnectFailReason {

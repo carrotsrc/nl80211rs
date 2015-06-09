@@ -10,11 +10,11 @@ eg.
 
 Becomes
 
-`nl80211::Commands::StartAp`
+`nl80211rs::Commands::StartAp`
 
 
 
-The constants are held in their own module `nl80211::constants`. Constants are almost identical to the prepocessor directives, except they are not prefixed with NL80211_.
+The constants are held in their own module `nl80211rs::constants`. Constants are almost identical to the prepocessor directives, except they are not prefixed with NL80211_.
 
 
 ### Progress

@@ -1,4 +1,9 @@
 [package]
 name = "nl80211rs"
 version = "0.1.0"
-authors = ["Charlie FG <cfg@zunautica.org>"]
+authors = ["Charlie FG <charlie@carrotsrc.org>"]
+description = "Hand conversion of netlink 802.11 public header file into a module"
+readme = "README.md"
+keywords = ["nl80211", "80211", "nl80211.h"]
+license = "MIT"
+repository = "http://www.github.com/carrotsrc/nl80211rs"
